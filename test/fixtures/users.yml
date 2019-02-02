@@ -8,4 +8,4 @@ michael:
 hiroshi:
   name: Hiroshi
   email: hiroshi@example.com
-  password_digest: <%= User.digest('password12') %>
+  password_digest: <%= User.digest('password') %>

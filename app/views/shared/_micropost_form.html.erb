@@ -1,6 +1,10 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
+  <div class="field"> 
+  
+    <%= f.label :instrument_list, "楽器（カンマ区切り）" %><br>
+    <%= text_field_tag 'micropost[instrument_list]', @micropost.instrument_list.join(','), "data-role" => "tagsinput" %>
+  
     <%= f.text_area :content %>
   </div>
   <%= f.submit "投稿", class: "btn btn-primary" %>

@@ -9,3 +9,13 @@ hiroshi:
   name: Hiroshi
   email: hiroshi@example.com
   password_digest: <%= User.digest('password') %>
+  
+archer:
+  name: Archer
+  email: archer@example.com
+  password_digest: <%= User.digest('password') %>
+  
+lana:
+  name: Lana
+  email: lana@example.com
+  password_digest: <%= User.digest('password') %>

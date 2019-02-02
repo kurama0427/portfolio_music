@@ -1,4 +1,5 @@
 class Micropost < ApplicationRecord
+  acts_as_taggable_on :instruments
   belongs_to :user
   default_scope -> { order(created_at: :desc) }
   mount_uploader :picture, PictureUploader

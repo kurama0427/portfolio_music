@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
-   before_action :set_request_variant
+  before_action :set_request_variant
 
   
 
@@ -17,6 +17,8 @@ class ApplicationController < ActionController::Base
     end
     
     def set_request_variant
-       request.variant = :mobile
+      if request.from_smartphone?
+        request.variant = :mobile
+      end
     end
 end

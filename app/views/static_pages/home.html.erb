@@ -5,7 +5,7 @@
         <%= render 'shared/user_info' %>
       </section>
       <% populars.each do |popular| %>
-      <%= link_to "#{popular}", "retrieval/#{popular}", method: :post %>
+      <%= link_to "#{popular}", "/retrieval/#{popular}", method: :post %>
       <% end %>
       
     </aside>

@@ -1,9 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
-  before_action :set_request_variant
-
-  
 
   private
 
@@ -15,10 +12,5 @@ class ApplicationController < ActionController::Base
         redirect_to login_url
       end
     end
-    
-    def set_request_variant
-      if request.from_smartphone?
-        request.variant = :mobile
-      end
-    end
+  
 end

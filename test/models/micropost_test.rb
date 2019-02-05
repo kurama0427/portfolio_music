@@ -4,6 +4,7 @@ class MicropostTest < ActiveSupport::TestCase
   def setup
     @user = users(:michael)
     @micropost = @user.microposts.build(content: "Lorem ipsum")
+    @micropost.instrument_list.add("drum")
   end
 
   test "should be valid" do
@@ -12,6 +13,11 @@ class MicropostTest < ActiveSupport::TestCase
 
   test "user id should be present" do
     @micropost.user_id = nil
+    assert_not @micropost.valid?
+  end
+  
+  test "instrument should be present" do
+    @micropost.instrument_list = []
     assert_not @micropost.valid?
   end
   

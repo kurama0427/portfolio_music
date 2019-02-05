@@ -8,4 +8,9 @@ class StaticPagesController < ApplicationController
 
   def about
   end
+  
+  def retrieval
+    @feed_items = Micropost.tagged_with(params[:word]).paginate(page: params[:page])
+    render 'home'
+  end
 end

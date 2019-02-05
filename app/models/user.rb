@@ -12,10 +12,5 @@ class User < ApplicationRecord
                                                   BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
-  
-  # 試作feedの定義
-  def feed
-    Micropost.where("user_id = ?", id)
-  end
 
 end

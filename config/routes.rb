@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/signup', to:'users#new'
   get '/home',   to:'static_pages#home'
   get '/about',  to:'static_pages#about'
+  post '/retrieval/:word', to:'static_pages#retrieval'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'

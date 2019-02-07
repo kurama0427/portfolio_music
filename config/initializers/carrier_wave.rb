@@ -7,7 +7,7 @@ if Rails.env.production?
       :aws_access_key_id     => 'AKIAJXYG46J7STG354CQ',
       :aws_secret_access_key => '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'
     }
-    config.fog_directory     =  'kuromiportfolio'
+    config.fog_directory     =  'kuromiportfolio2'
     config.cache_storage = :fog
   end
 end

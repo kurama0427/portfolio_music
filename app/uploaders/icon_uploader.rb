@@ -10,7 +10,6 @@ class IconUploader < CarrierWave::Uploader::Base
   else
     storage :file
   end
-  # storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -20,10 +19,6 @@ class IconUploader < CarrierWave::Uploader::Base
   
   version :micropost_icon do
     process resize_to_fill: [50, 50]
-  end
-  
-  version :profile_icon do
-    process resize_to_fill: [80, 80]
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:

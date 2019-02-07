@@ -1,4 +1,5 @@
-CarrierWave.configure do |config|
+if Rails.env.production?
+  CarrierWave.configure do |config|
     config.fog_credentials = {
       # Amazon S3用の設定
       :provider              => 'AWS',
@@ -8,4 +9,5 @@ CarrierWave.configure do |config|
     }
     config.fog_directory     =  'kuromiportfolio'
     config.cache_storage = :fog
+  end
 end

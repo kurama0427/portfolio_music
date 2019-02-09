@@ -4,13 +4,14 @@
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
+      <p>楽器別検索</p>
       <% populars.each do |popular| %>
       <%= link_to "#{popular}", "/retrieval/#{popular}", method: :post %>
       <% end %>
       
     </aside>
     <div class="col-md-8">
-      <h3>Micropost Feed</h3>
+      <h3>新着投稿一覧</h3>
       <%= render 'shared/feed' %>
     </div>
   </div>

@@ -1,5 +1,5 @@
 module StaticPagesHelper
   def populars
-    ActsAsTaggableOn::Tag.most_used(3)
+    ActsAsTaggableOn::Tag.most_used(10)
   end
 end

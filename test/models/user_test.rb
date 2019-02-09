@@ -66,10 +66,13 @@ class UserTest < ActiveSupport::TestCase
   
   test "associated microposts should be destroyed" do
     @user.save
-    @user.microposts.create!(content: "Lorem ipsum", instrument_list: "drum")
+    @user.microposts.create!(song_title: "Song", content: "Lorem ipsum", instrument_list: "drum")
     assert_difference 'Micropost.count', -1 do
       @user.destroy
     end
   end
   
+  test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
+  end
 end

@@ -1,3 +1,9 @@
-<div class="icon"><%= image_tag current_user.picture.url if current_user.picture? %></div>
+<div class="icon">
+  <% if current_user.picture? %>
+    <span><%= image_tag current_user.picture.url %></span>
+  <% else %>
+    <span><%= image_tag 'default_profile_icon.jpg' %></span>
+  <% end %>
+</div>
 <h1><%= link_to current_user.name, current_user %></h1>
 <span><%= pluralize(current_user.microposts.count, "micropost") %></span>

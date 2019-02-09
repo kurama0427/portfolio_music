@@ -2,7 +2,7 @@ class IconUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
-  process resize_to_limit: [80, 80]
+  process resize_to_fill: [80, 80]
 
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?
@@ -20,7 +20,11 @@ class IconUploader < CarrierWave::Uploader::Base
   end
   
   version :micropost_icon do
-    process resize_to_limit: [50, 50]
+    process resize_to_fill: [50, 50]
+  end
+  
+  def default_url
+    "default.jpg"
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:

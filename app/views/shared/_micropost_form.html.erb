@@ -1,16 +1,20 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field"> 
+    <%= f.label :song_title, "曲名" %>
+    <%= f.text_field :song_title, class: 'form-control' %>
   
-    <%= f.label :instrument_list, "楽器（カンマ区切り）" %><br>
+    <%= f.label :instrument_list, "楽器（複数の場合カンマ区切り）" %><br>
     <%= text_field_tag 'micropost[instrument_list]', @micropost.instrument_list.join(','), "data-role" => "tagsinput" %>
   
     <%= f.text_area :content %>
   </div>
-  <%= f.submit "投稿", class: "btn btn-primary" %>
+  
   <span class="picture">
+    <%= f.label :picture, "画像（任意）" %>
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
   </span>
+  <%= f.submit "投稿", class: "btn btn-primary" %>
 <% end %>
 
 <script type="text/javascript">

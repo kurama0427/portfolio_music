@@ -21,7 +21,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     assert_select 'div#error_explanation'
     # 有効な送信
     assert_difference 'Micropost.count', 1 do
-      post microposts_path, params: { micropost: { content: content, instrument_list: "drum" } }
+      post microposts_path, params: { micropost: { song_title: "Song", content: content, instrument_list: "drum" } }
     end
     assert_redirected_to @user
     follow_redirect!

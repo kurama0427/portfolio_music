@@ -3,7 +3,7 @@ require 'test_helper'
 class MicropostTest < ActiveSupport::TestCase
   def setup
     @user = users(:michael)
-    @micropost = @user.microposts.build(content: "Lorem ipsum")
+    @micropost = @user.microposts.build(song_title: "Song", content: "Lorem ipsum")
     @micropost.instrument_list.add("drum")
   end
 
@@ -13,6 +13,11 @@ class MicropostTest < ActiveSupport::TestCase
 
   test "user id should be present" do
     @micropost.user_id = nil
+    assert_not @micropost.valid?
+  end
+  
+  test "song_title should be present" do
+    @micropost.song_title = "  "
     assert_not @micropost.valid?
   end
   

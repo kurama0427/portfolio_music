@@ -30,6 +30,13 @@ micropost_<%= n %>:
   user: michael
 <% end %>
 
+<% 30.times do |n| %>
+archer_micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: archer
+<% end %>
+
 ants:
   content: "Oh, is that what you want? Because that's how you get ants!"
   created_at: <%= 2.years.ago %>

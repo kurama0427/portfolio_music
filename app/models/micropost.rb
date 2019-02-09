@@ -7,6 +7,7 @@ class Micropost < ApplicationRecord
   validates :content, presence: true, length: { maximum: 140 }
   validate  :picture_size
   validates  :instrument_list, presence: true
+  validates  :song_title, presence: true
 
   private
 

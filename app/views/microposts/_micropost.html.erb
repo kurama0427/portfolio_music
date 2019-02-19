@@ -7,9 +7,12 @@
     <% end %>
   </div>
   <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
-  <span class="song_title">
+  <span class="title song_title">
     <%= micropost.song_title %>
     <%= render 'microposts/instrument_list', instrument_list: micropost.instrument_list %>
+    <span class="title beginner">
+      <%= micropost.beginner %>
+    </span>
   </span>
   <span class="content">
     <%= micropost.content %>

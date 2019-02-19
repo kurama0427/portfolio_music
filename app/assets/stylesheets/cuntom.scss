@@ -68,6 +68,14 @@ p {
   text-decoration: none;
 }
 
+.navbar-nav{
+  li{
+    a{
+      color: white;
+    }
+  }
+}
+
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
@@ -90,15 +98,15 @@ $gray-medium-light: #eaeaea;
 
 /* forms */
 
-input, textarea, select, .uneditable-input {
+textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
 }
 
-input {
-  height: auto !important;
+input{
+  margin-bottom: 10px;
 }
 
 #error_explanation {
@@ -130,6 +138,9 @@ input {
   }
   .song_title{
     display: block;
+    .beginner{
+      color: red;
+    }
   }
   .content {
     display: block;
@@ -146,13 +157,6 @@ input {
   }
   .icon {
     float: left;
-  }
-}
-
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
   }
 }
 
@@ -192,15 +196,9 @@ aside {
       margin-top: 0px;
     }
   }
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
+  .second_list{
+    margin-top: 20px;
+  }
 }
 
 

@@ -13,4 +13,9 @@ class StaticPagesController < ApplicationController
     @feed_items = Micropost.tagged_with(params[:word]).paginate(page: params[:page])
     render 'home'
   end
+  
+  def beginner
+    @feed_items = Micropost.where(beginner: "初心者にもおすすめ" ).paginate(page: params[:page])
+    render 'home'
+  end
 end

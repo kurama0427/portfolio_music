@@ -8,8 +8,11 @@
       <% populars.each do |popular| %>
       <%= link_to "#{popular}", "/retrieval/#{popular}", method: :post %>
       <% end %>
-      
+      <div class="second_list">
+        <%= link_to "初心者にもおすすめの曲を探す", "/beginner", method: :post %>
+      </div>
     </aside>
+    
     <div class="col-md-8">
       <h3>新着投稿一覧</h3>
       <%= render 'shared/feed' %>

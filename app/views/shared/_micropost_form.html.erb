@@ -8,7 +8,12 @@
     <%= text_field_tag 'micropost[instrument_list]', @micropost.instrument_list.join(','), "data-role" => "tagsinput" %>
   
     <%= f.text_area :content %>
+    
+    <label><%=f.radio_button :beginner, "初心者にもおすすめ" %>初心者にもおすすめできる！</label>
+    
   </div>
+  
+  
   
   <span class="picture">
     <%= f.label :picture, "画像（任意）" %>

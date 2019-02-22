@@ -17,8 +17,8 @@ User.create!(name:  "くろみ",
              password_confirmation: "katakata")
              
 daiki = User.find(1);
-daiki.micropost.create!(song_title: "半径30cmの中を知らない",
-                        instrument_list: "ドラム",
+daiki.microposts.create!(song_title: "半径30cmの中を知らない",
+                        instrument_list: ["ドラム"],
                         content: "キメが多くて難しいです！")
 
              

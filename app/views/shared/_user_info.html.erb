@@ -5,5 +5,7 @@
     <span><%= image_tag 'default_profile_icon.jpg' %></span>
   <% end %>
 </div>
-<h1><%= link_to current_user.name, current_user %></h1>
-<span><%= pluralize(current_user.microposts.count, "曲のコピー") %></span>
+<div class="user">
+  <h1><%= link_to current_user.name, current_user %></h1>
+  <span><%= pluralize(current_user.microposts.count, "曲のコピー") %></span>  
+</div>

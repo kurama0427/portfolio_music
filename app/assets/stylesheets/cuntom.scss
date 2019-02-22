@@ -23,6 +23,10 @@ textarea {
   margin-bottom: 10px;
 }
 
+.icon img{
+  border-radius: 50%;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -134,10 +138,13 @@ input{
     border-top: 1px solid #e8e8e8;
   }
   .user {
+    display: block;
     padding-top: 0;
+    margin-left: 60px;
   }
   .song_title{
     display: block;
+    margin-left: 60px;
     .beginner{
       color: red;
     }
@@ -174,6 +181,13 @@ aside {
     margin-top: 20px;
     .icon{
       float: left;
+    }
+    .user{
+      float: left;
+      margin-left: 10px;
+    }
+    .user_show{
+      margin-top: 20px;
     }
   }
   section {

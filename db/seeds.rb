@@ -6,8 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.order(:created_at).take(6)
-50.times do
-  content = Faker::Lorem.sentence(5)
-  users.each { |user| user.microposts.create!(content: content) }
-end
+User.create!(name:  "だいき",
+             email: "aaaa@aaaa.com",
+             password:              "taretare",
+             password_confirmation: "taretare")
+
+User.create!(name:  "くろみ",
+             email: "bbbb@bbbb.com",
+             password:              "katakata",
+             password_confirmation: "katakata")
+             
+daiki = User.find(1);
+daiki.micropost.create!(song_title: "半径30cmの中を知らない",
+                        instrument_list: "ドラム",
+                        content: "キメが多くて難しいです！")
+
+             

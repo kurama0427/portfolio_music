@@ -1,25 +1,28 @@
-<% provide(:title, @user.name) %>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
+      <div class="icon">
+        <% if current_user.picture? %>
+        　<span><%= image_tag current_user.picture.url %></span>
+      　<% else %>
+        　<span><%= image_tag 'default_profile_icon.jpg' %></span>
+    　　　<% end %>
+      </div>
       
-      <% if current_user.picture? %>
-      　<span><%= image_tag current_user.picture.url %></span>
-    　<% else %>
-      　<span><%= image_tag 'default_profile_icon.jpg' %></span>
-  　　　<% end %>
+      <div class="user user_show">
+        <h1>
+          <%= @user.name %>
+        </h1>
+        <p>
+          <%= @user.profile %>
+        </p>
+        <span>
+          <% if current_user?(@user) %>
+            <%= link_to "編集", edit_user_path(current_user) %>
+          <% end %>
+        </span>
+      </div>
       
-      <h1>
-        <%= @user.name %>
-      </h1>
-      <p>
-        <%= @user.profile %>
-      </p>
-      <span>
-        <% if current_user?(@user) %>
-          <%= link_to "編集", edit_user_path(current_user) %>
-        <% end %>
-      </span>
     </section>
   </aside>
   <div class="col-md-8">

@@ -80,6 +80,12 @@ p {
   }
 }
 
+.navbar-toggle{
+  span{
+    color: white;
+  }
+}
+
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;

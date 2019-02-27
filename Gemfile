@@ -48,6 +48,7 @@ gem 'CFPropertyList', '2.3.6'
 gem 'unf_ext', '0.0.7.5'
 gem 'unf', '0.1.4'
 gem 'domain_name', '0.5.20180417'
+gem 'dry-inflector', '0.1.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

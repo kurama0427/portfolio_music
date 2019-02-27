@@ -31,7 +31,7 @@ jobs:
       - run:
           name: Bundle Install
           command: |
-            bundle install --without production
+            bundle install 
 
       - save_cache:
           paths:

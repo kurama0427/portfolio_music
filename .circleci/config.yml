@@ -25,6 +25,8 @@ jobs:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
+            
+      - run: heroku buildpacks:set https://github.com/bundler/heroku-buildpack-bundler2
 
       - run:
           name: install dependencies
@@ -40,7 +42,6 @@ jobs:
       - run: bundle exec rake db:schema:load
 
       # run tests!
-      - run: heroku buildpacks:set https://github.com/bundler/heroku-buildpack-bundler2
       - run:
           name: run tests
           command: rails test

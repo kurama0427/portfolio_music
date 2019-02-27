@@ -31,11 +31,6 @@ jobs:
           paths:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-
-      # run tests!
-      - run:
-          name: run tests
-          command: rails test
           
 
       # collect reports

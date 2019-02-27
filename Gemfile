@@ -46,6 +46,7 @@ gem 'mini_magick',             '4.7.0'
 gem 'acts-as-taggable-on'
 gem 'CFPropertyList', '2.3.6'
 gem 'unf_ext', '0.0.7.5'
+gem 'unf', '0.1.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

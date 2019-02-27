@@ -41,6 +41,7 @@ jobs:
       - run: bundle exec rake db:schema:load
 
       # run tests!
+      - run: heroku buildpacks:set https://github.com/bundler/heroku-buildpack-bundler2
       - run:
           name: run tests
           command: rails test

@@ -52,6 +52,7 @@ gem 'dry-inflector', '0.1.2'
 gem 'excon', '0.62.0'
 gem 'fission', '0.5.0'
 gem 'fog-core', '1.45.0'
+gem 'fog-json', '1.2.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -10,7 +10,9 @@ jobs:
       # コードのチェックアウト
       - checkout
       
-      - gem install bundler -v 1.17.3
+      - run:
+          name: bundler
+          command: gem install bundler -v 2.0.1
 
       # bundle installのキャシュがあればそれを取ってくる
       - restore_cache:

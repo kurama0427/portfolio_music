@@ -8,6 +8,10 @@ jobs:
     steps:
       # コードのチェックアウト
       - checkout
+      
+      - run:
+          name: remove gemfile
+          command: rm Gemfile.lock
 
       # bundle installのキャシュがあればそれを取ってくる
       - restore_cache:

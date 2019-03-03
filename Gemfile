@@ -44,20 +44,7 @@ gem 'bootstrap-will_paginate'
 gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
 gem 'acts-as-taggable-on'
-gem 'CFPropertyList', '2.3.6'
-gem 'unf_ext', '0.0.7.5'
-gem 'unf', '0.1.4'
-gem 'domain_name', '0.5.20180417'
-gem 'dry-inflector', '0.1.2'
-gem 'excon', '0.62.0'
-gem 'fission', '0.5.0'
-gem 'fog-core', '1.45.0'
-gem 'fog-json', '1.2.0'
-gem 'ipaddress', '0.8.3'
-gem 'xml-simple', '1.1.5'
-gem 'fog-aliyun', '0.3.3'
-gem 'fog-xml', '0.1.3'
-gem 'fog-atmos', '0.1.0'
+
 
 
 group :development, :test do

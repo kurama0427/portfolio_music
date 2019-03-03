@@ -40,12 +40,12 @@ jobs:
           command: bundle exec rails test
           
       - run:
-        name: heroku deploy # push方式でアップしている。アプリ本体はサブディレクトリに有るのでsubtreeやprefix指定する
-        command: |
-          gem uninstall bundler # bundlerをアンインストール
-          gem install bundler -v 1.17.3 # version明記
-          rm Gemfile.lock # Gemdile.lockがgemのversionを明記しているため、一旦削除
-          bundle install
-          git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME_STAGING.git master
+          name: heroku deploy # push方式でアップしている。アプリ本体はサブディレクトリに有るのでsubtreeやprefix指定する
+          command: |
+            gem uninstall bundler # bundlerをアンインストール
+            gem install bundler -v 1.17.3 # version明記
+            rm Gemfile.lock # Gemdile.lockがgemのversionを明記しているため、一旦削除
+            bundle install
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME_STAGING.git master
           
       

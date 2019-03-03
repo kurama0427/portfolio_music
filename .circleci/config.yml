@@ -51,7 +51,7 @@ jobs:
     - run: 
         name: heroku bundler
         command: |
-          heroku buildpacks:set https://github.com/bundler/heroku-buildpack-bundler2.git
+          heroku git:remote --app $HEROKU_APP_NAME_PROD
         
     - run:
         name: heroku deploy

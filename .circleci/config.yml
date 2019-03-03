@@ -5,13 +5,13 @@ jobs:
       - image: circleci/ruby:2.4.1-node-browsers
         environment:
           RAILS_ENV: test
+    dependencies:
+      pre:
+        - gem uninstall bundler
+        - gem install bundler -v 1.13.7
     steps:
       # コードのチェックアウト
       - checkout
-      
-      - run:
-          name: reset gemfile
-          command: > Gemfile.lock
 
       # bundle installのキャシュがあればそれを取ってくる
       - restore_cache:

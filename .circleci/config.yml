@@ -39,6 +39,6 @@ jobs:
           name: Rails Test
           command: bundle exec rails test
           
-      -run:
+      - run:
           name: Heroku deploy
           command: git push heroku master

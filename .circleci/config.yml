@@ -52,11 +52,27 @@ jobs:
         name: heroku bundler
         command: |
           heroku git:remote --app $HEROKU_APP_NAME_PROD
+    # bundle installのキャシュがあればそれを取ってくる
+      - restore_cache:
+          keys:
+            - gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - gem-cache-{{ arch }}-{{ .Branch }}
+            - gem-cache
+
+      # bundle installの実行
+      - run:
+          name: Bundle Install
+          command: bundle check --path=vendor/bundle || bundle install --path vendor/bundle --clean --jobs 4 --retry 3
+
+      # bundle installのデータをキャッシュ
+      - save_cache:
+          key: gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - ./vendor/bundle
         
     - run:
         name: heroku deploy
         command: |
-          bundle check --path=vendor/bundle || bundle install --path vendor/bundle --clean --jobs 4 --retry 3
           git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME_PROD.git master
     - run:
         name: heroku maintenance off

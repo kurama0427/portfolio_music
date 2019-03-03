@@ -58,7 +58,7 @@ gem 'xml-simple', '1.1.5'
 gem 'fog-aliyun', '0.3.3'
 gem 'fog-xml', '0.1.3'
 gem 'fog-atmos', '0.1.0'
-gem 'rake', '12.3.2'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

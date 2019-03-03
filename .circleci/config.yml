@@ -41,7 +41,7 @@ jobs:
         
   deploy-prod: #本番環境への実行内容　Herokuアプリ名の環境変数値だけが違う
     machine:
-      image: circleci/classic:edge
+      image: circleci/ruby:2.4.1-node-browsers
     steps:
     - checkout
     - run:

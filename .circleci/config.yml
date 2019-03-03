@@ -38,3 +38,7 @@ jobs:
       - run:
           name: Rails Test
           command: bundle exec rails test
+          
+      -run:
+          name: Heroku deploy
+          command: git push heroku master

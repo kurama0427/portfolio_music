@@ -8,7 +8,7 @@ jobs:
     dependencies:
       pre:
         - gem uninstall bundler
-        - gem install bundler -v 1.13.7
+        - gem install bundler -v 2.0.1
     steps:
       # コードのチェックアウト
       - checkout

@@ -19,7 +19,9 @@ jobs:
       # bundle installの実行
       - run:
           name: Bundle Install
-          command: bundle _1.17.3_ install --path vendor/bundle --clean --jobs 4 --retry 3
+          command: |
+            gem install bundler -v 1.17.3
+            bundle _1.17.3_ install --path vendor/bundle --clean --jobs 4 --retry 3
 
       # bundle installのデータをキャッシュ
       - save_cache:

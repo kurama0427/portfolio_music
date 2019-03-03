@@ -3,7 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.4.1-node-browsers
-        
+        environment:
+          RAILS_ENV: test
     steps:
       # コードのチェックアウト
       - checkout
@@ -41,5 +42,6 @@ jobs:
       - run:
           name: heroku deploy
           command: |
+            heroku buildpacks:set https://github.com/bundler/heroku-buildpack-bundler2.git
             git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME_PROD.git master
       

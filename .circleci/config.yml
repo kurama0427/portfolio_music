@@ -10,10 +10,11 @@ jobs:
       # コードのチェックアウト
       - checkout
       
-      - dependencies:
-          pre:
-            - gem uninstall bundler
-            - gem install bundler -v 2.0.1
+      - run:
+          name: bundler
+          command: |
+            gem uninstall bundler
+            gem install bundler -v 2.0.1
 
       # bundle installのキャシュがあればそれを取ってくる
       - restore_cache:

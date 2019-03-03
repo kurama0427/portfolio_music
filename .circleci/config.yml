@@ -56,6 +56,7 @@ jobs:
     - run:
         name: heroku deploy
         command: |
+          heroku login
           git push heroku master
     - run:
         name: heroku maintenance off

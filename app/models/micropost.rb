@@ -8,7 +8,7 @@ class Micropost < ApplicationRecord
   validate  :picture_size
   validates  :instrument_list, presence: true
   validates  :song_title, presence: true
-
+  
   private
 
     # アップロードされた画像のサイズをバリデーションする

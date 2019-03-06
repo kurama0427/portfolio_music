@@ -1,5 +1,15 @@
 ja:
-  microposts:
+  activerecord:
+    attributes:
+      micropost:
+        content: 本文
+        instrument_list: 楽器
+        song_title: 曲名
+      user:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+  datetime:
     distance_in_words:
       half_a_minute: "30秒前後"
       less_than_x_seconds:

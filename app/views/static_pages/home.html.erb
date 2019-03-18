@@ -19,13 +19,24 @@
     </div>
   </div>
 <% else %>
-  <div class="center jumbotron">
-    <h1>ようこそ</h1>
-
-    <h2>
-      曲をコピーした感想を書くサイトです。練習する曲を選ぶ時の参考にしてください！
-    </h2>
-
-    <%= link_to "新規登録", signup_path, class: "btn btn-lg btn-primary" %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <p>コピーした曲の感想を投稿するサイトです！</p>
+        <p>投稿にはユーザー登録が必要です。</p>
+      </section>
+      <p>楽器別検索</p>
+      <% populars.each do |popular| %>
+      <%= link_to "#{popular}", "/retrieval/#{popular}", method: :post %>
+      <% end %>
+      <div class="second_list">
+        <%= link_to "初心者にもおすすめの曲を探す", "/beginner", method: :post %>
+      </div>
+    </aside>
+    
+    <div class="col-md-8">
+      <h3>新着投稿一覧</h3>
+      <%= render 'shared/feed' %>
+    </div>
   </div>
 <% end %>

@@ -2,8 +2,8 @@
   <aside class="col-md-4">
     <section class="user_info">
       <div class="icon">
-        <% if current_user.picture? %>
-        　<span><%= image_tag current_user.picture.url %></span>
+        <% if @user.picture? %>
+        　<span><%= image_tag @user.picture.url %></span>
       　<% else %>
         　<span><%= image_tag 'default_profile_icon.jpg' %></span>
     　　　<% end %>

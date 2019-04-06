@@ -1,24 +1,16 @@
-# README
+アプリケーションの概要
+・演奏した曲の感想を投稿するSNSサイトです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+アプリケーションの機能一覧
+・記事一覧表示機能
+・記事投稿機能
+・ユーザ登録機能
+・ユーザログイン機能
+・画像ファイルのアップロード機能
+・ページネーション機能
+・タグを用いた記事検索機能
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+アプリケーション内で使用している技術
+インフラ：heroku
+DB：PostgreSQL
+画像保存用ストレージ：Amazon S3

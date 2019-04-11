@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_19_065258) do
+ActiveRecord::Schema.define(version: 2019_04_11_061952) do
 
   create_table "microposts", force: :cascade do |t|
     t.text "content"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2019_02_19_065258) do
     t.string "picture"
     t.string "song_title"
     t.string "beginner"
+    t.string "artist"
+    t.text "itunes_link"
     t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_microposts_on_user_id"
   end

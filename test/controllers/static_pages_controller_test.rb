@@ -10,11 +10,6 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     get home_path
     assert_response :success
   end
-
-  test "should get about" do
-    get about_path
-    assert_response :success
-  end
   
   test "should retrieval" do
     post '/retrieval/drum'

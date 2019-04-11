@@ -13,6 +13,7 @@
     <nav>
       <ul id="navbar" class="nav navbar-nav navbar-right navbar-collapse collapse">
         <li><%= link_to "ホーム", root_path %></li>
+        <li><%= link_to "曲情報検索", '/song_index' %></li>
         <% if logged_in? %>
           <li><%= link_to "投稿する", new_micropost_path %></li>
           <li><%= link_to "ログアウト", logout_path, method: :delete %></li>

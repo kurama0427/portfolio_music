@@ -151,9 +151,6 @@ input{
   .song_title{
     display: block;
     margin-left: 60px;
-    .beginner{
-      color: red;
-    }
   }
   .content {
     display: block;
@@ -161,6 +158,10 @@ input{
     img {
       display: block;
       padding: 5px 0;
+    }
+    .beginner{
+      display: block;
+      color: red;
     }
   }
   .timestamp {

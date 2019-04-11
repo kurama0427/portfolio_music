@@ -1,0 +1,15 @@
+<%= form_tag '/index' do |form| %>
+  <%= text_field_tag :form_words %>
+  <%= submit_tag "検索" %>
+<% end %>
+
+<% if @result.present? %>
+  <% "aaaaaaaaaaa" %>
+  <% @result['results'].each do |hash| %>
+    <div>
+        <%= hash['artistName'] %>
+        <%= hash['trackName'] %>
+        <%= link_to "itunes", hash['trackViewUrl'], target: :_blank %>
+    </div>
+  <% end %>
+<% end %>
